@@ -1,0 +1,86 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>User Form</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="full_name" class="form-label">Full Name</label>
+                <input type="text" name="full_name" id="full_name" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" id="password" class="form-control" required>
+            </div>
+           
+            <div class="col-md-6">
+                <label for="grade_level" class="form-label">Grade Level</label>
+                <select name="grade_level" id="grade_level" class="form-select">
+                    <option value="FR">Freshman</option>
+                    <option value="SO">Sophomore</option>
+                    <option value="JR">Junior</option>
+                    <option value="SR">Senior</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="schedules" class="form-label">Schedules</label>
+                <textarea name="schedules" id="schedules" class="form-control"></textarea>
+            </div>
+            <div class="col-md-6">
+                <label for="course_catalog" class="form-label">Course Catalog</label>
+                <input type="file" name="course_catalog" id="course_catalog" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="high_school_gpa_w" class="form-label">Weighted GPA</label>
+                <input type="number" name="high_school_gpa_w" id="high_school_gpa_w" step="0.01" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="high_school_gpa_uw" class="form-label">Unweighted GPA</label>
+                <input type="number" name="high_school_gpa_uw" id="high_school_gpa_uw" step="0.01" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="sat_reading" class="form-label">SAT Reading</label>
+                <input type="number" name="sat_reading" id="sat_reading" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="sat_math" class="form-label">SAT Math</label>
+                <input type="number" name="sat_math" id="sat_math" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="act" class="form-label">ACT</label>
+                <input type="number" name="act" id="act" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="chosen_major" class="form-label">Chosen Major</label>
+                <input type="text" name="chosen_major" id="chosen_major" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="college_level" class="form-label">College Level</label>
+                <select name="college_level" id="college_level" class="form-select">
+                    <option value="Low Tier">Low Tier</option>
+                    <option value="Mid Tier">Mid Tier</option>
+                    <option value="Top Tier">Top Tier</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <label for="extracurr_awards" class="form-label">Extracurricular Awards</label>
+                <textarea name="extracurr_awards" id="extracurr_awards" class="form-control"></textarea>
+            </div>
+            <div class="col-12">
+                <label for="notes" class="form-label">Notes</label>
+                <textarea name="notes" id="notes" class="form-control"></textarea>
+            </div>
+           
+            <div class="col-12">
+                <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
