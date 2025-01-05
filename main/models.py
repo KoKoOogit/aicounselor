@@ -31,6 +31,9 @@ class User(models.Model):
     sat_math = models.IntegerField()
     act = models.IntegerField()
     chosen_major = models.CharField(max_length=100000000)
+    LOW_TIER = "LT"
+    MID_TIER = "MT"
+    TOP_TIER = "TT"
     COLLEGE_LEVEL = {
         LOW_TIER: "Low Tier",
         MID_TIER: "Mid Tier",
@@ -49,7 +52,7 @@ class User(models.Model):
         return '%s - %s' % (self.full_name, self.grade_level)
 
 
-class ChatHistory(models.Model):
+class NormalChatHistory(models.Model):
     history = models.TextField(max_length=1000000000000000000) 
 
 class SchedChatHistory(models.Model):
@@ -77,7 +80,10 @@ class College(models.Model):
 class CollegeList(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     college = models.ForeignKey(College, on_delete=models.CASCADE)
-    essays = 
+    essays = models.BooleanField() 
+    score_report = models.BooleanField() 
+    sat_report = models.BooleanField() 
+    additional_questions = models.BooleanField() 
 
     def __str__(self):
         return '%s - %s' % (self.user, self.college)
