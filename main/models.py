@@ -53,12 +53,15 @@ class User(models.Model):
 
 
 class NormalChatHistory(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     history = models.TextField(max_length=1000000000000000000) 
 
 class SchedChatHistory(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     history = models.TextField(max_length=1000000000000000000)
 
 class TutorChatHistory(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     history = models.TextField(max_length=1000000000000000000)
 
 class College(models.Model):
