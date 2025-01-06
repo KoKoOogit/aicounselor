@@ -1,0 +1,32 @@
+{% extends "main/base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row my-3">
+        <div class="col-6">
+            <h3>Feedback</h3>
+            <div class="bg-secondary border rounded border-dark">
+                <p class="text-light px-3 my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim tempora placeat, explicabo nobis necessitatibus possimus eius, dolorum numquam excepturi magni repudiandae impedit. Fuga nesciunt nostrum cumque animi vel, hic ratione?</p>
+                <div class="my-3">
+                    <button class="btn btn-success mx-3">Accept</button><button class="btn btn-danger bg-none">Ignore</button>
+                </div>
+            </div>
+
+        </div>
+        </form>
+        <div class="col-6">
+            <form action="{ %url 'essay'%}" method="POST">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Prompt</label>
+                <input type="text" class="form-control" id="Prompt" placeholder="essayPrompt">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Essay</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="button" class="btn btn-secondary">Generate</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

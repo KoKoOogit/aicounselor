@@ -139,3 +139,19 @@ def dashboard(request):
             'fullName': user.full_name,
         }
         return render(request, 'dashboard.html', Context)
+
+def scheduler(request):
+    return render(request, 'main/scheduler.html', {})
+
+def chad(request):
+    return render(request, "main/chad.html", {})
+
+def essay(request):
+    return render(request, "main/essay.html", {})       
+
+def tutor(request):
+    return render(request, "main/tutor.html", {})
+
+
+def checklist(request):
+    return render(request, "main/checklist.html", {})

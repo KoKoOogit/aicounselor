@@ -21,16 +21,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Schedule Planning</a>
+                        <a href="{% url 'scheduler'%}" class="nav-link" aria-current="page" href="#">Schedule Planning</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Essay Counseling</a>
+                        <a href="{% url 'chad'%}" class="nav-link">Chat With Counselor</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Tutoring/ GPA Management</a>
+                        <a class="nav-link" href="{% url 'essay' %}">Essay Counseling</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Application Manager</a>
+                        <a href="{% url 'tutor'%}" class="nav-link">Tutoring/ GPA Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'checklist'%}" class="nav-link">Application Manager</a>
                     </li>
                 </ul>
                 

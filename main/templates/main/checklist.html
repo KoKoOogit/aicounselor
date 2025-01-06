@@ -1,0 +1,92 @@
+{% extends "main/base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <h3>College Suggestions</h3>
+
+            <div class="my-3">
+                <div class="card border border-end my-2">
+                    <div class="card-body">
+                        <h3>UC Berkley</h3>
+                        <p>Location: Berkley, CA</p>
+                        <button class="btn-secondary btn">Add to my list</button>
+                    </div>
+                   
+                </div>
+
+                <div class="card border border-end my-2">
+                    <div class="card-body">
+                        <h3>UCLA</h3>
+                        <p>Location: Los Angles, CA</p>
+                <button class="btn-secondary btn">Add to my list</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6">
+            <h3>Application Checklist</h3>
+
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <h5>MIT</h5>
+                        <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> Essays
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> Score Report
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> SAT Report
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> PIQs
+                        </div>
+                        
+                       <div class="ml-auto">
+                        <button class="btn btn-primary p-0 ml-auto"> Completed </button>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <h5>Stanford</h5>
+                        <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> Essays
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> Score
+                            Report
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> SAT
+                            Report
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> PIQs
+                        </div>
+            
+                        <div class="ml-auto">
+                            <button class="btn btn-primary p-0 ml-auto"> Completed </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <h5>Caltech</h5>
+                        <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> Essays
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> Score
+                            Report
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> SAT
+                            Report
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> PIQs
+                        </div>
+            
+                        <div class="ml-auto">
+                            <button class="btn btn-primary p-0 ml-auto"> In Progress </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+    </div>
+</div>
+{% endblock %}
